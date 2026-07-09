@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Happy Birthday!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+   
+<div class="screen active" id="screen1">
+    <h1 id="introText"></h1> 
+    <p>Psychological assessment ready.</p>
+    <button onclick="goToScreen('screen2')">Begin</button>
+</div>
+
+<div class="screen" id="screen2">
+    <h1>Question 1. Looking at the image, what do you see?</h1>
+
+    <img class="inkblot" src="inkblot.png" alt="Rorschach inkblot">
+
+    <button onclick="showWrong()">a butterfly</button>
+    <button onclick="showWrong()">a bat</button>
+    <button onclick="showWrong()">a face</button>
+    <button onclick="revealInkblot()">something suspicious...</button>
+
+    <p id="wrongText"></p>
+</div>
+
+<div class="screen" id="wrongScreen">
+    <h1 class="wrong-text">INCORRECT RESPONSE. </h1> 
+<p class="wrong-subtext">recalibrating psychological standards...</p>
+</div>
+
+<div class="screen" id="screen3">
+   <div class="zoom-container">
+    <img src="cabbageReveal.png" class="zoom-image" alt="Cabbage man reveal">
+   </div>
+   <p id="cabbageText"> it was the cabbage merchant! </p>
+
+   <button id="afterZoomButton" onclick="goToScreen('screen11')">Continue</button>
+</div>
+
+<div class="screen" id="screen4">
+    <h1>Question 2</h1>
+    <p>is it your birthday?</p>
+
+    <button onclick="goToScreen('screen5')">yes</button>
+    <button onclick="goToScreen('screen5')">super yes</button>
+</div>
+
+<div class="screen" id="screen5">
+    <h1>Question 2</h1>
+    <p>WHO is the smartest, most compassionate, most altruistic, most loving, most loyal, did i mention smartest? sister EVER?</p>
+
+    <button onclick="goToScreen('screen6')">clare</button>
+    <button onclick="goToScreen('screen6')">clare but with more enthusiasm</button>
+</div>
+
+
+<div class="screen" id="screen6">
+    <h1>Question 3</h1>
+    <p>in the event of a zombie apocalypse, what is your main priority?</p>
+
+    <button onclick="goToScreen('screen7')">scavenge for food</button>
+    <button onclick="goToScreen('screen7')">become a zombie</button>
+    <button onclick="goToScreen('screen7')">find shelter</button>
+    <button onclick="goToScreen('screen7')">try to find a cure</button>
+    <button onclick="goToScreen('screen7')">find weapons</button>
+</div>
+
+<div class="screen" id="screen7">
+    <h1>Question 4</h1>
+    <p>which animal do you resonate with the most?</p>
+
+    <button onclick="goToScreen('screen8')">eel</button>
+    <button onclick="goToScreen('screen8')">naked mole rat</button>
+    <button onclick="goToScreen('screen8')">worm</button>
+    <button onclick="goToScreen('screen8')">pigeon</button>
+    <button onclick="goToScreen('screen8')">frog</button>
+    <button onclick="goToScreen('screen8')">squid</button>
+</div>
+
+<div class="screen" id="screen8">
+    <h1>Question 5</h1>
+    <p>finally, if you were approached by a clown, what is your response?</p>
+
+    <button onclick="goToScreen('screen9')">scream</button>
+    <button onclick="goToScreen('screen9')">have a nice conversation</button>
+    <button onclick="goToScreen('screen9')">pull a double uppercut</button>
+    <button onclick="goToScreen('screen9')">run away</button>
+
+</div>
+
+<div class="screen" id="screen9">
+    <h1>processing results...</h1>
+    <p id="loadingText">analysing subject...</p>
+</div>
+
+<div class="screen" id="screen10">
+    <h1>Diagnosis:</h1>
+    <p class="diagnosis"> Official Diagnosis: unc</p>
+
+    <p class="message" id="finalMessage"></p>
+</div>
+
+<div class="screen" id="screen11">
+    <h1>Diagnostic Note:</h1>
+    <p>subject mistook the cabbage merchant for rorschach inkblot, symptom of acute cabbage confusion..</p>
+
+    <button onclick="goToScreen('screen4')">Continue</button>
+</div>
+
+<script src="script.js"></script>
+    </body>
+</html>
